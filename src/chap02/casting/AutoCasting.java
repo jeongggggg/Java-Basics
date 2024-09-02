@@ -4,6 +4,9 @@ package chap02.casting;
 
 public class AutoCasting {
     public static void main(String[] args) {
+
+        ForceCasting fc = new ForceCasting(); // 참조 타입 변수, class 선언
+
         byte byteValue = 10;
         int intValue = byteValue;        // 타입 변환 (byte -> int)
         System.out.println(intValue);
