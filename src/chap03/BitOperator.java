@@ -10,6 +10,5 @@ public class BitOperator {
         System.out.println(x | y);
         System.out.println(x ^ y);
         System.out.println(~x);
-
     }
 }
