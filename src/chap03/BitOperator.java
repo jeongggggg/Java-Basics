@@ -10,5 +10,9 @@ public class BitOperator {
         System.out.println(x | y);
         System.out.println(x ^ y);
         System.out.println(~x);
+
+        // 비트 쉬프트 연산자
+        int value = 8;
+        System.out.println(value >>> 1);
     }
 }
