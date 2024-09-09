@@ -1,4 +1,4 @@
-package chap07;
+package chap07.override;
 
 public class ChildExample {
     public static void main(String[] args) {
