@@ -10,6 +10,13 @@ public class Driver {
             System.out.println("Taxi//");
         }
 
+        // swicth-case문(JDK 17부터 사용 가능)
+        switch(vehicle){
+            case Bus bus -> System.out.println("Bus");
+            case Taxi taxi -> System.out.println("Taxi");
+            default -> System.out.println("Unknown vehicle");
+        }
+
         vehicle.run();
     }
 }
