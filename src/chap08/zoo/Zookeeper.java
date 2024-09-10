@@ -1,6 +1,6 @@
 package chap08.zoo;
 
-public class zookeeper {
+public class Zookeeper {
     void feed(Lion lion){
         System.out.println("feed fish");
     }

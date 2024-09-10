@@ -7,7 +7,7 @@ package chap08.zoo;
 */
 public class Zoo {
     public static void main(String[] args) {
-        zookeeper zookepper = new zookeeper();
+        Zookeeper zookepper = new Zookeeper();
 
         Lion lion = new Lion();
         zookepper.feed(lion);
