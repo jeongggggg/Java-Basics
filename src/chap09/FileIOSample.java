@@ -24,12 +24,10 @@ public class FileIOSample {
             BufferedReader reader = new BufferedReader(new FileReader(filename));
             System.out.println(reader.readLine());
             reader.close(); // 파일 입출력 관련된 클래스의 객체를 생성했을 때 자원을 닫아주어야 메모리 누수가 없음
-        } catch (FileNotFoundException e){
-            System.out.println("파일을 찾을 수 없습니다.");
+        } catch (FileNotFoundException | ArithmeticException e){
+            System.out.println("Exception: " + e);
         } catch (IOException e) {
             System.out.println("IOException 발생");
-        }catch (ArithmeticException e){
-            System.out.println("ArithmeticException 발생");
         }
     }
 }
