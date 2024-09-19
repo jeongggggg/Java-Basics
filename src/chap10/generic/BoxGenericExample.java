@@ -15,7 +15,8 @@ public class BoxGenericExample {
         // 제네릭 메서드
         Box<String> value =  Util.boxing("문자열 값"); // 매개변수의 타입이 메서드의 리턴 타입이 되기 때문에 Box<String>으로 호출되는 것이다.
 
-        // Util.boxing(56789); // 리턴 타입은? Integer
-
+         Util.boxing(56789); // 리턴 타입은? Integer
+        Box<Integer> value2 = Util.boxing(56789);
+        Box<Double> value3 = Util.boxing(567.8);
     }
 }
