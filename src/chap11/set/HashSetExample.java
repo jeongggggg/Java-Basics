@@ -41,6 +41,7 @@ public class HashSetExample {
 
         // Person이라는 객체를 같은 이름을 가지고 있지만 다른 해시코드를 가지고 있어서 각각 다른 객체로 인식되는데 하나의 객체로 인지하고 중복 체크에서 걸리기 위해서 Person클래스에 hashCode와 equals라는 object에 있는 메서드를 재정의 해준다.
 
+        // 다른 패키지
         Person person1 = new Person("이름");
         Person person2 = new Person("이름");
 
@@ -48,5 +49,17 @@ public class HashSetExample {
         set.add(person1);
         set.add(person2);
         System.out.println(set.size()); // 중복 체크해서 하나의 값만 출력 1
+
+        // 같은 패키지
+        
+        // hashSet이 중복 체크를 할 수 있도록(같은 값으로 인식할 수 있도록 변경)
+        // 중복체크를 할 때 객체 해시 코드를 바라보지 않고 name과 age 값이 동일하다면 중복으로(같은 객체로) 볼 수 있게 변경을 위해 hashCode와 equals 메서드를 재정의 해줄 것임
+        Member member1 = new Member("", 30);
+        Member member2 = new Member("", 30);
+
+        Set<Member> memberSet = new HashSet<>();
+        memberSet.add(member1);
+        memberSet.add(member2);
+        System.out.println(memberSet.size()); // name, age 값이 같을 경우 객체로 취급
     }
 }
