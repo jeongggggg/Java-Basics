@@ -6,9 +6,10 @@ package chap10.quiz;
     일치하지 않으면 null을 리턴하도록 getValue() 제네릭 메소드를 정의해보세요.
  */
 
+// (접근제한)<타입 파라미터> 리턴타입 메서드명(매개변수...)
 public class Util {
-    public static <K, V> V getValue(Pair<? extends K, V> pair, K key) {
-        if (pair.getKey().equals(key)) {
+     public static <T extends Pair<K, V>, K, V>V getValue(T pair, K key) {
+        if (pair.getKey() == key){
             return pair.getValue();
         } else {
             return null;
