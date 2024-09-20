@@ -19,4 +19,19 @@ public class Person {
         // return super.toString(); // 부모의 toString 출력
         return name; // 입력 받은 이름을 바로 리턴할 수 있게 return getName 으로 해도 됨
     }
+
+    @Override
+    public int hashCode(){
+        return name.hashCode();
+    }
+
+   @Override
+    public boolean equals(Object obj){
+        if(obj instanceof Person){
+            Person person = (Person) obj;
+            return person.name.equals(name);
+        } else{
+            return super.equals(obj);
+        }
+   }
 }
