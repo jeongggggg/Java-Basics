@@ -26,7 +26,7 @@ public class LambdaExample2 {
 
         // Predicate 구현 객체를 람다식으로 작성
         // test 라는 가상 클래스 사용
-        Predicate<String> isEmpty = (x) -> x.length() == 0;
+        Predicate<String> isEmpty = (x) -> x.length() == 0; // String :: isEmpty , 클래스명 :: 메서드명
         System.out.println("빈값 체크 : " + isEmpty.test(""));
         System.out.println("빈값 체크 : " + isEmpty.test("12345678"));
         Predicate<Integer> predicate = x -> x % 2 == 0;
