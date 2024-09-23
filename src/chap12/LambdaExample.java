@@ -54,5 +54,7 @@ public class LambdaExample {
         int result2 = inter5.method(3,5);
         System.out.println("result2: " + result2);
 
+        MyFunctionalInterface4 inter6 = (i, j) -> i + j;    // 익명 구현 객체
+        int result3 = inter6.method(1,5);
     }
 }
