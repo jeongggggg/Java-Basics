@@ -1,6 +1,7 @@
 package chap13;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -56,5 +57,53 @@ public class quiz {
                  .map(person -> person.name)
                  .toList();
         System.out.println(peopleList);
+
+        System.out.println("=============");
+
+        List<String> words = Arrays.asList("apple", "banana", "cherry");
+
+        List<String> wordsResult = words.stream()
+                .filter(x -> x.length() <= 5)
+                .toList();
+        System.out.println(wordsResult);
+
+        System.out.println("=============");
+
+        List<String> words2 = Arrays.asList("hello", "world", "java");
+
+        List<String> result3 = words2.stream()
+                .map(x -> x.toUpperCase())
+                .sorted(Comparator.reverseOrder())
+                .toList();
+        System.out.println(result3);
+
+        System.out.println("=============");
+
+        List<String> words3 = Arrays.asList("apple", "banana", "cat", "dog", "elephant");
+
+        List<String> result4 = words3.stream()
+                .filter(x -> x.length() >= 5)
+                .toList();
+
+        System.out.println(result4);
+
+        System.out.println("=============");
+
+        List<Integer> numbers3 = Arrays.asList(5, 12, 25, 37, 48, 50, 63);
+
+        List<Integer> result5 = numbers3.stream()
+                .filter(x -> 50 > x && x > 10)
+                .toList();
+        System.out.println(result5);
+
+        System.out.println("=============");
+
+        List<String> sentences2 = Arrays.asList("I like apples", "Bananas are tasty", "apple pie is delicious", "I have an apple");
+
+        List<String> result6 = sentences2.stream()
+                .filter(x -> x.contains("apple"))
+                .toList();
+        System.out.println(result6);
+
     }
 }
